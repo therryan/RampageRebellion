@@ -1,0 +1,172 @@
+<main>
+  <level>
+    <wave>
+      <enemy type="Small" x="-100" y="100"></enemy>
+      <enemy type="Small" x="100" y="100"></enemy>
+    </wave>
+    <wave>
+      <enemy type="Small" x="-120" y="30"></enemy>
+      <enemy type="Small" x="120" y="30"></enemy>
+      <enemy type="Small" x="-270" y="180"></enemy>
+      <enemy type="Small" x="270" y="180"></enemy>
+    </wave>
+    <wave>
+      <enemy type="Medium" x="0" y="100"></enemy>
+      <enemy type="Small" x="-50" y="60"></enemy>
+      <enemy type="Small" x="50" y="60"></enemy>
+    </wave>
+    <wave>
+      <enemy type="Medium" x="0" y="400"></enemy>
+      <enemy type="Small" x="-50" y="350"></enemy>
+      <enemy type="Small" x="50" y="350"></enemy>
+      <enemy type="Small" x="-100" y="200"></enemy>
+      <enemy type="Small" x="100" y="200"></enemy>
+      <enemy type="Small" x="-150" y="0"></enemy>
+      <enemy type="Small" x="150" y="0"></enemy>
+    </wave>
+    <wave>
+      <enemy type="Medium" x="0" y="150"></enemy>
+      <enemy type="Small" x="-75" y="0"></enemy>
+      <enemy type="Small" x="75" y="0"></enemy>
+      <enemy type="Medium" x="-150" y="150"></enemy>
+      <enemy type="Medium" x="150" y="150"></enemy>
+      <enemy type="Small" x="-225" y="0"></enemy>
+      <enemy type="Small" x="225" y="0"></enemy>
+    </wave>
+  </level>
+  <level>
+    <wave>
+      <enemy type="Medium" x="0" y="0"></enemy>
+      <enemy type="Small" x="0" y="70"></enemy>
+      <enemy type="Small" x="0" y="120"></enemy>
+      <enemy type="Small" x="0" y="170"></enemy>
+      <enemy type="Small" x="0" y="220"></enemy>
+      <enemy type="Medium" x="-100" y="0"></enemy>
+      <enemy type="Medium" x="100" y="0"></enemy>
+      <enemy type="Medium" x="-200" y="0"></enemy>
+      <enemy type="Medium" x="200" y="0"></enemy>
+    </wave>
+    <wave>
+      <enemy type="Small" x="-50" y="100"></enemy>
+      <enemy type="Small" x="-50" y="150"></enemy>
+      <enemy type="Small" x="-50" y="200"></enemy>
+      <enemy type="Small" x="-50" y="250"></enemy>
+      <enemy type="Small" x="50" y="100"></enemy>
+      <enemy type="Small" x="50" y="150"></enemy>
+      <enemy type="Small" x="50" y="200"></enemy>
+      <enemy type="Small" x="50" y="250"></enemy>
+      <enemy type="Medium" x="-100" y="0"></enemy>
+      <enemy type="Medium" x="100" y="0"></enemy>
+      <enemy type="Small" x="-150" y="100"></enemy>
+      <enemy type="Small" x="150" y="100"></enemy>
+    </wave>
+    <wave>
+      <enemy type="Big" x="0" y="100"></enemy>
+      <enemy type="Medium" x="-120" y="100"></enemy>
+      <enemy type="Medium" x="120" y="100"></enemy>
+      <enemy type="Small" x="-190" y="100"></enemy>
+      <enemy type="Small" x="190" y="100"></enemy>
+    </wave>
+    <wave>
+      <enemy type="Big" x="0" y="0"></enemy>
+      <enemy type="Medium" x="-70" y="70"></enemy>
+      <enemy type="Medium" x="70" y="70"></enemy>
+      <enemy type="Medium" x="-120" y="120"></enemy>
+      <enemy type="Medium" x="120" y="120"></enemy>
+      <enemy type="Medium" x="-170" y="170"></enemy>
+      <enemy type="Medium" x="170" y="170"></enemy>
+    </wave>
+    <wave>
+      <enemy type="Medium" x="0" y="0"></enemy>
+      <enemy type="Medium" x="0" y="300"></enemy>
+      <enemy type="Small" x="-75" y="75"></enemy>
+      <enemy type="Small" x="75" y="75"></enemy>
+      <enemy type="Big" x="-150" y="150"></enemy>
+      <enemy type="Big" x="150" y="150"></enemy>
+    </wave>
+  </level>
+  <level>
+    <wave>
+      <enemy type="Big" x="0" y="0"></enemy>
+      <enemy type="Big" x="0" y="150"></enemy>
+      <enemy type="Small" x="-20" y="300"></enemy>
+      <enemy type="Small" x="20" y="300"></enemy>
+      <enemy type="Medium" x="-225" y="75"></enemy>
+      <enemy type="Medium" x="225" y="75"></enemy>
+      <enemy type="Medium" x="-75" y="300"></enemy>
+      <enemy type="Medium" x="75" y="300"></enemy>
+    </wave>
+    <wave>
+      <enemy type="Big" x="0" y="0"></enemy>
+      <enemy type="Small" x="-30" y="250"></enemy>
+      <enemy type="Small" x="30" y="250"></enemy>
+      <enemy type="Medium" x="-80" y="100"></enemy>
+      <enemy type="Medium" x="80" y="100"></enemy>
+      <enemy type="Small" x="-120" y="200"></enemy>
+      <enemy type="Small" x="120" y="200"></enemy>
+      <enemy type="Small" x="-150" y="300"></enemy>
+      <enemy type="Small" x="150" y="300"></enemy>
+    </wave>
+    <wave>
+      <enemy type="Medium" x="0" y="50"></enemy>
+      <enemy type="Medium" x="0" y="150"></enemy>
+      <enemy type="Medium" x="0" y="250"></enemy>
+      <enemy type="Small" x="100" y="100"></enemy>
+      <enemy type="Small" x="-100" y="100"></enemy>
+      <enemy type="Small" x="50" y="40"></enemy>
+      <enemy type="Small" x="-50" y="40"></enemy>
+      <enemy type="Small" x="0" y="0"></enemy>
+    </wave>
+    <wave>
+      <enemy type="Big" x="-70" y="180"></enemy>
+      <enemy type="Big" x="70" y="180"></enemy>
+      <enemy type="Small" x="-250" y="0"></enemy>
+      <enemy type="Small" x="-250" y="100"></enemy>
+      <enemy type="Small" x="-250" y="200"></enemy>
+      <enemy type="Small" x="-250" y="300"></enemy>
+      <enemy type="Small" x="-250" y="400"></enemy>
+      <enemy type="Small" x="250" y="0"></enemy>
+      <enemy type="Small" x="250" y="100"></enemy>
+      <enemy type="Small" x="250" y="200"></enemy>
+      <enemy type="Small" x="250" y="300"></enemy>
+      <enemy type="Small" x="250" y="400"></enemy>
+    </wave>
+    <wave>
+      <enemy type="Big" x="0" y="0"></enemy>
+    </wave>
+  </level>
+  <level>
+    <wave>
+      <enemy type="Small" x="100" y="100"></enemy>
+    </wave>
+    <wave>
+      <enemy type="Small" x="100" y="100"></enemy>
+    </wave>
+    <wave>
+      <enemy type="Small" x="100" y="100"></enemy>
+    </wave>
+    <wave>
+      <enemy type="Small" x="100" y="100"></enemy>
+    </wave>
+    <wave>
+      <enemy type="Small" x="100" y="100"></enemy>
+    </wave>
+  </level>
+  <level>
+    <wave>
+      <enemy type="Small" x="100" y="100"></enemy>
+    </wave>
+    <wave>
+      <enemy type="Small" x="100" y="100"></enemy>
+    </wave>
+    <wave>
+      <enemy type="Small" x="100" y="100"></enemy>
+    </wave>
+    <wave>
+      <enemy type="Small" x="100" y="100"></enemy>
+    </wave>
+    <wave>
+      <enemy type="Small" x="100" y="100"></enemy>
+    </wave>
+  </level>
+</main>
