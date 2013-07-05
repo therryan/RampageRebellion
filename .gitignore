@@ -44,6 +44,7 @@ ipch/
 *.opensdf
 *.sdf
 *.cachefile
+*.csproj.Debug.cachefile
 
 # Visual Studio profiler
 *.psess
