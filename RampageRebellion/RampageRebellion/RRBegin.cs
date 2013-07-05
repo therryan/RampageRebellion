@@ -17,8 +17,6 @@ using Jypeli.Widgets;
 /// </summary>
 public class RampageRebellion : PhysicsGame
 {
-    RREnemySpawner ES;
-
     #region Tech Data
 
     /**
@@ -274,6 +272,7 @@ public class RampageRebellion : PhysicsGame
     public volatile List<Label> pwArsenalLabels;
     public volatile GameObject pauseMenuDummy;
     public volatile Image pauseMenu;
+    RREnemySpawner ES;
     #endregion
 
     #region Initialization
