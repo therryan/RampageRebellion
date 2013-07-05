@@ -37,12 +37,14 @@ x64/
 *.vssscc
 .builds
 
-# Visual C++ cache files
+# Visual C++/C# cache files
 ipch/
 *.aps
 *.ncb
 *.opensdf
 *.sdf
+*.cachefile
+*.csproj.Debug.cachefile
 
 # Visual Studio profiler
 *.psess

@@ -17,8 +17,6 @@ using Jypeli.Widgets;
 /// </summary>
 public class RampageRebellion : PhysicsGame
 {
-    RREnemySpawner ES;
-
     #region Tech Data
 
     /**
@@ -85,23 +83,17 @@ public class RampageRebellion : PhysicsGame
     /// <summary>
     /// Position used for the weapon selector position
     /// </summary>
-    /// 
-
     public readonly Vector WMETER_POSITION = new Vector(400.0, -80.0);
 
     /// <summary>
     /// (Base position) for arsenal upgrades
     /// </summary>
-    /// 
-
     //REMEMBER - Base screen 1024x820
     public readonly Vector ARSENAL_BASE_POSITION = new Vector(-300, -300);
-
 
     /// <summary>
     /// Position used for respawning the player.
     /// </summary>
-
     public readonly Vector RESPAWN_POSITION = new Vector(-200.0, -300.0);
     /// <summary>
     /// Gravity vector.
@@ -233,55 +225,47 @@ public class RampageRebellion : PhysicsGame
     private RRShip playerShip;
     private static Object upgradeLockObject = new Object();
 
-
     /// <summary>
     /// Internal variable, whenever the vibration features are enabled
     /// </summary>
-
     public bool vibrateEnabled = false;
-
 
     /// <summary>
     /// Primary weapon for the player. Fast but not too efficient
     /// </summary>
-
     public RRWeapon primaryWeapon;
 
     /// <summary>
     /// Secondary weapon. Not too fast to fire or to advance, but is effective
     /// </summary>
-    /// 
     public RRWeapon secWeapon;
 
     /// <summary>
     /// Third weapon. Insensibly inaccurate shooter! >:D
     /// </summary>
-    /// 
     public RRWeapon triWeapon;
 
     /// <summary>
     /// Bomb, that is.
     /// </summary>
-    /// 
     public RRWeapon bomb;
 
     /// <summary>
     /// Player weapon arsenal! >:D
     /// </summary>
-
     public volatile RRWeaponArsenal playerWeaponArsenal;
+
     public volatile List<IntMeter> pwArsenalUpgrades;
     public volatile List<Label> pwArsenalLabels;
     public volatile GameObject pauseMenuDummy;
     public volatile Image pauseMenu;
+    RREnemySpawner ES;
     #endregion
 
     #region Initialization
     /// <summary>
     /// The title screen void that loads the title screen background, which contains control information.
     /// </summary>
-    /// 
-
     public override void Begin()
     {
         gameObject = this;
@@ -298,19 +282,17 @@ public class RampageRebellion : PhysicsGame
         Keyboard.Listen(Key.Escape, ButtonState.Pressed, ConfirmExit, null);
 
         //Reset weapon upgrades here. They should not be lost upon accessing the pause menu - only when resetting!
-
         generateArsenalData();
     }
 
     /// <summary>
     /// Sets visibility for arsenal labels
     /// </summary>
-    /// <param name="visible"></param>
-
     private void hideArsenalLabels()
     {
         pauseMenuDummy.Image = null;
-        for (int i = 0; i < 4; i++) {
+        for (int i = 0; i < 4; i++) 
+        {
             pwArsenalLabels[i].Destroy();
         }
 
@@ -366,7 +348,6 @@ public class RampageRebellion : PhysicsGame
     /// Get game object
     /// </summary>
     /// <returns></returns>
-
     public static RampageRebellion getGame()
     {
         return gameObject;
@@ -428,7 +409,6 @@ public class RampageRebellion : PhysicsGame
             case ControllerType.Keyboard:
                 Keyboard.Listen(Key.Escape, ButtonState.Pressed, delegate { Pause(); ResetGame(); }, null);
                 Keyboard.Listen(Key.P, ButtonState.Pressed, delegate { Unpause(player, controllerType, primaryWeapon); }, null);
-                //JAKE: Weapon upgrade keys here
                 Keyboard.Listen(Key.Q, ButtonState.Pressed, triggerUpdateKeys, null, 0);
                 Keyboard.Listen(Key.W, ButtonState.Pressed, triggerUpdateKeys, null, 1);
                 Keyboard.Listen(Key.E, ButtonState.Pressed, triggerUpdateKeys, null, 2);
@@ -487,15 +467,6 @@ public class RampageRebellion : PhysicsGame
         border.Tag = "B";
         Add(border);
     }
-
-    /// <summary>
-    /// Void that creates the player's collision detector box and sprite, adding controls for them.
-    /// </summary>
-    /// <param name="position">Vector location of the object, as specified in GameStart</param>
-    /// <param name="width">Width of the object, as specified in GameStart</param>
-    /// <param name="height">Height of the object, as specified in GameStart</param>
-    /// <param name="controllerType">The type of controls used</param>
-    /// 
 
     public void vibrateController()
     {
@@ -573,22 +544,14 @@ public class RampageRebellion : PhysicsGame
 
 
     /// <summary>
-    /// Trigger for weapon updates. Triggered in pause menu
-    /// 
-    /// DOCUMENTATION:
-    /// 
+    /// Trigger for weapon updates. Triggered in pause menu.
     /// 1st upgrade level: 2x size bullet
     /// 2nd upgrade: damage OR fire rate
     /// 3rd upgrade damage OR fire rate
-    /// 4rd upgrade (bomb only) - free bomb!
-    /// 
-    /// FOR JAKE: When adding the 4th weapon - ensure that the bomb remains to be the last of the weapons in WeaponArsenal
-    /// 
+    /// 4th upgrade (bomb only) - free bomb!
     /// </summary>
     /// <param name="i">Weapon triggering parameters</param>
-
     //((pwArsenalUpgrades[x] >= 1) ? (2) : (1))
-
     public void triggerUpdateKeys(int i) {
         lock (upgradeLockObject)
         {
@@ -614,12 +577,10 @@ public class RampageRebellion : PhysicsGame
     /// <summary>
     /// Triggers the bomb - aka THE LAST of all weapons, as expected so far!
     /// </summary>
-
     public void triggerBomb()
     {
         playerWeaponArsenal.singleShoot(playerWeaponArsenal.Weapons.Count - 1);
     }
-
 
     public void CreatePlayer(Vector position, double width, double height, ControllerType controllerType)
     {
@@ -652,8 +613,7 @@ public class RampageRebellion : PhysicsGame
     /// <summary>
     /// Generates weapons for the player's use
     /// </summary>
-    /// <param name="ship"></param>
-
+    /// <param name="ship">Player ship</param>
     private void GeneratePlayerWeapons(RRShip ship)
     {
         SoundEffect WeaponFire = LoadSoundEffect("Shot");
@@ -838,7 +798,6 @@ public class RampageRebellion : PhysicsGame
         //player.Velocity = force;
     }
 
-
     public void CreateWeaponMeter()
     {
         Label weaponMeter = new Label(METER_LENGTH, METER_HEIGHT);
@@ -875,7 +834,7 @@ public class RampageRebellion : PhysicsGame
     /// <summary>
     /// Creates a health meter on the screen recursively. Length of the health meter is dependant on player maximum health.
     /// </summary>
-    /// <param name="i"></param>
+    /// <param name="i">Recursion loop counter</param>
     public void CreateHealthMeter(int i)
     {
         if (i >= PLAYER_HP) return;
@@ -961,8 +920,6 @@ public class RampageRebellion : PhysicsGame
     #endregion
 
     #region Enemy Logic
-
-
     /// <summary>
     /// After a successfully ran game, opens score screen and starts the program over after closing it.
     /// </summary>
